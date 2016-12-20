@@ -1,6 +1,6 @@
 (function($) {
 
-	$.fn.centerImage = function(parentString) {
+	$.fn.coverImage = function(parentString) {
 		var _this = this;
 		
 		$(window).on('resize', function() {
