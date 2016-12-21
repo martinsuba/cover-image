@@ -1,4 +1,4 @@
-(function($) {
+;(function ($, window, document, undefined) {
 
 	$.fn.coverImage = function(parentString) {
 		var _this = this;
@@ -32,4 +32,4 @@
 		}).trigger('resize');
 	};
 
-}(jQuery));
+})(jQuery, window, document);
