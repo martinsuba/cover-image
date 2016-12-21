@@ -2,8 +2,8 @@
 
 	$.fn.coverImage = function(parentString) {
 		var imageSelector = this;
-		
-		$(window).on('resize', function() {
+
+		var init = function() {
 
 			imageSelector.each(function() {
 				var $image = $(this),
@@ -29,6 +29,10 @@
 				else
 					$image.css({ width: '100%', height: 'auto' });
 			});
+		};
+		
+		$(window).on('resize', function() {
+			init();
 		}).trigger('resize');
 	};
 
