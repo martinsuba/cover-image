@@ -33,7 +33,7 @@
 		
 		$(window).on('resize', function() {
 			init();
-		}).trigger('resize');
+		}).trigger('resize'); // run when page load
 	};
 
 })(jQuery, window, document);
