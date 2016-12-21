@@ -1,11 +1,11 @@
 ;(function ($, window, document, undefined) {
 
 	$.fn.coverImage = function(parentString) {
-		var _this = this;
+		var imageSelector = this;
 		
 		$(window).on('resize', function() {
 
-			_this.each(function() {
+			imageSelector.each(function() {
 				var $image = $(this),
 						$parent;
 
@@ -14,11 +14,11 @@
 				else
 					$parent = $image.parent();
 				
-				var _image = new Image();
-				_image.src = $image.attr("src");
+				var imageClone = new Image();
+				imageClone.src = $image.attr("src");
 
-				var imageW  = _image.width,
-						imageH  = _image.height,
+				var imageW  = imageClone.width,
+						imageH  = imageClone.height,
 						imageR  = imageW / imageH,
 						parentW = $parent.width(),
 						parentH = $parent.height(),
