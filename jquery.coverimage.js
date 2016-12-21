@@ -34,6 +34,8 @@
 		$(window).on('resize', function() {
 			init();
 		}).trigger('resize'); // run when page load
+
+		return imageSelector;
 	};
 
 })(jQuery, window, document);
